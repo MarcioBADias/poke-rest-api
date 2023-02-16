@@ -1,13 +1,42 @@
 <template>
     <div class="container">
         <h1>Pokemon's</h1>
+        <PokemonList 
+            :imageUrl="imageUrl" 
+            :apiUrl="apiUrl"
+            @setPokemonUrl="setPokemonUrl"
+        />
 
     </div>
 </template>
 
 <script>
+    import PokemonList from './PokemonList.vue';
+
     export default {
         name: 'PokemonPage',
+
+        data: () => {
+           return {
+            imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
+            apiUrl: 'https://pokeapi.co/api/v2/pokemon/',
+            pokemonUrl:'',
+            showDetail: false
+           } 
+        },
+        components: {
+            PokemonList
+        },
+        methods: {
+            setPokemonUrl(url) {
+                this.pokemonUrl = url;
+                this.showDetail = true;
+            },
+            closeDetail() {
+                this.pokemonUrl = '';
+                this.showDetail = false;
+            }
+        }
     };
 </script>
 
@@ -27,10 +56,11 @@
     
     h1{
         background: #fefefe;
-        border: #1E90FF solid 3px;
-        box-shadow: 0 15px 30px #fefefe,
-                    0 10px 10px #fefefe;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2),
+                    0 10px 10px rgba(0,0,0,.2);
         border-radius: 10px;
-        padding: 0 .5rem;
+        color: #1E90FF;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
     }
 </style>
