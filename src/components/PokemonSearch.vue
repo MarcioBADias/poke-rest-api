@@ -38,7 +38,7 @@
 
 <style>
     .search-area{
-        background-color: #efefef;
+        background-color: #0a2e50;
         border-radius: 5px;
         position: relative;
         width: 100%;
@@ -53,7 +53,7 @@
     }
 
     input {
-        border: 3px solid #1E90FF;
+        border: none;
         outline: none;
         border-radius: 5px;
         padding: 1rem 4rem 1rem 1rem;
