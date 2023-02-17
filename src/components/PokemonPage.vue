@@ -10,6 +10,7 @@
             v-if="showDetail"
             :pokemonUrl="pokemonUrl"
             :imageUrl="imageUrl"
+            @closeDetail="closeDetail"
         />
     </div>
 </template>

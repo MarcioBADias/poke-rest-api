@@ -54,7 +54,7 @@
                         {{ pokemon.stats[5].base_stat }}
                     </div>
                 </div>
-                <h3>Pokemon Types</h3>
+                <h3 class="subTitle">Pokemon Types</h3>
                 <div class="types">
                     <div class="type" 
                         v-for="(value, index) in pokemon.types"
@@ -62,7 +62,7 @@
                         {{ value.type.name }}
                     </div>
                 </div>
-                <h3>Abilities</h3>
+                <h3 class="subTitle">Abilities</h3>
                 <div class="abilities">
                     <div class="ability" 
                         v-for="(value, index) in pokemon.abilities"
@@ -71,7 +71,14 @@
                     </div>
                 </div>
             </div>
+            <h2 v-else>
+                O pokemon não foi encontrado
+            </h2>
+            <button class="close" @click="closeDetail">
+                Close
+            </button>
         </div>
+        <i v-else class="fas fa-spinner fa-spin"></i>
     </div>
 </template>
 
@@ -105,7 +112,11 @@
                     .catch(error => {
                         console.log(error);
                     })
-            }, 
+            },
+            
+            closeDetail() {
+                this.$emit('closeDetail');
+            }
         },
 
         created() {
@@ -186,7 +197,7 @@
             float: right;
     }
 
-    h3{
+    .subTitle{
         border-bottom: 1px solid #ccc;
         max-width: 400px;
         width: 90%;
@@ -212,11 +223,28 @@
     }
 
     .type{
-        background-color: #0a2e50;
+        background-color: #1E90FF;
     }
 
     .ability{
         background-color: #c73015;
+    }
+
+    .close{
+        background: #0a2e50;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #efefef;
+        padding: 1rem 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        cursor: pointer
+    }
+
+    i{
+        font-size: 2rem;
+        color: #efefef;
     }
 
 </style>
