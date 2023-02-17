@@ -1,5 +1,5 @@
 <template>
-    <div class="detail">
+    <div class="detail" @click="clickOutside">
         <div class="detail-view" v-if="show">
             <div v-if="pokemon" class="image">
                 <img :src="imageUrl+pokemon.id+'.png'" alt="">
@@ -111,6 +111,12 @@
                     .catch(error => {
                         console.log(error);
                     })
+            },
+
+            clickOutside(event) {
+                if (!event.target.closest('.detail-view')) {
+                    this.closeDetail();
+                }
             },
             
             closeDetail() {
