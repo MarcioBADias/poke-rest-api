@@ -40,11 +40,11 @@
 <style>
     .search-area{
         border-radius: 5px;
-        position: relative;
-        width: 100%;
         margin-bottom: 1rem;
         max-width: 510px;
         padding: 1rem 0;
+        position: relative;
+        width: 100%;
     }
 
     label{
@@ -55,14 +55,15 @@
     input {
         background-color: #0A2E50;
         border: none;
-        outline: none;
         border-radius: 5px;
-        padding: 1rem 4rem 1rem 1rem;
-        width: 100%;
-        font-size: 1rem;
-        max-width: 510px;
         box-shadow: 10px 15px 30px rgba(0,0,0,.2),
                     10px 10px 10px rgba(0,0,0,.2);
+        color: #efefef;
+        font-size: 1rem;
+        max-width: 510px;
+        outline: none;
+        padding: 1rem 4rem 1rem 1rem;
+        width: 100%;
     }
 
     input::placeholder {
@@ -71,12 +72,12 @@
 
 
     i{
-        position: absolute;
-        top: 27px;
-        right: 20px;
-        font-size: 1.25rem;
         color: #0A2E50;
         cursor: pointer;
+        font-size: 1rem;
+        position: absolute;
+        right: 20px;
+        top: 27px;
     }
 
 </style>
