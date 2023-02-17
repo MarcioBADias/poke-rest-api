@@ -53,17 +53,22 @@
     }
 
     input {
-        background-color: #efefef;
+        background-color: #0A2E50;
         border: none;
         outline: none;
         border-radius: 5px;
         padding: 1rem 4rem 1rem 1rem;
         width: 100%;
         font-size: 1rem;
-        margin-top: 1rem;
+        max-width: 510px;
         box-shadow: 10px 15px 30px rgba(0,0,0,.2),
                     10px 10px 10px rgba(0,0,0,.2);
     }
+
+    input::placeholder {
+        color: #efefef;
+    }
+
 
     i{
         position: absolute;
