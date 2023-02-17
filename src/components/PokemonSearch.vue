@@ -1,16 +1,17 @@
 <template>
     <div class="search-area">
         <form @submit.prevent="setPokemonUrl">
-            <label>
-                Insira o nome ou "número de ID" de um pokemon abaixo:
-            </label>
             <input 
             type="text" 
             v-model="searchValue"
             @submit="setPokemonUrl"
+            placeholder="Insira o nome ou número de ID de um pokemon"
             >
         </form>
-        <i class="fas fa-search"></i>
+        <i 
+            class="fas fa-search"
+            @submit="setPokemonUrl"
+        ></i>
     </div>
 </template>
 
@@ -38,7 +39,6 @@
 
 <style>
     .search-area{
-        background-color: #0a2e50;
         border-radius: 5px;
         position: relative;
         width: 100%;
@@ -63,6 +63,15 @@
         margin-top: 1rem;
         box-shadow: 10px 15px 30px rgba(0,0,0,.2),
                     10px 10px 10px rgba(0,0,0,.2);
+    }
+
+    i{
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        font-size: 1.25rem;
+        color: #0A2E50;
+        cursor: pointer;
     }
 
 </style>
