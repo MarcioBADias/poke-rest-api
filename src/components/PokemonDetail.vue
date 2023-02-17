@@ -178,7 +178,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         width: 100%;
     }
 
