@@ -31,9 +31,9 @@
             async getPokeAPI() {
                 let req = new Request(this.currentUrl);
                 fetch(req)
-                .then((resp) => {
+                .then(resp => {
                     if(resp.status === 200)
-                    return resp.json();
+                        return resp.json();
                 })
                 .then((data) => {
                     this.nextUrl = data.next;

@@ -6,13 +6,18 @@
             :apiUrl="apiUrl"
             @setPokemonUrl="setPokemonUrl"
         />
-
+        <PokemonDetail 
+            v-if="showDetail"
+            :pokemonUrl="pokemonUrl"
+            :imageUrl="imageUrl"
+        />
     </div>
 </template>
 
 <script>
     import PokemonList from './PokemonList.vue';
-
+    import PokemonDetail from './PokemonDetail.vue';
+    
     export default {
         name: 'PokemonPage',
 
@@ -25,7 +30,8 @@
            } 
         },
         components: {
-            PokemonList
+            PokemonList,
+            PokemonDetail
         },
         methods: {
             setPokemonUrl(url) {
