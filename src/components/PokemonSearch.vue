@@ -48,7 +48,7 @@
     }
 
     label{
-        color:black;
+        color:#efefef;
         margin-bottom: 2rem;
     }
 
@@ -60,6 +60,7 @@
         padding: 1rem 4rem 1rem 1rem;
         width: 100%;
         font-size: 1rem;
+        margin-top: 2rem;
         box-shadow: 10px 15px 30px rgba(0,0,0,.2),
                     10px 10px 10px rgba(0,0,0,.2);
     }
