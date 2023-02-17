@@ -42,7 +42,7 @@
 
 <style>
     .container{
-        background: url(../../public/assets/img/poke-bg.jpg) no-repeat center / cover;
+        background: url(../../public/assets/img/poke-bg.jpg) center / cover;
         display:flex;
         justify-content: center;
         align-items: center;

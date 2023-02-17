@@ -6,6 +6,9 @@
             <img :src="imageUrl + pokemon.id + '.png'" width="96" alt="">
             <h3>{{ pokemon.name }}</h3>
         </article>
+        <div id="scroll-trigger" ref="infinitescrolltrigger">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
     </div>
 </template>
 
@@ -15,6 +18,7 @@
             'imageUrl',
             'apiUrl'
         ],
+
         data: () => {
             return {
                 pokemons: [],
@@ -22,6 +26,7 @@
                 currentUrl: ''
             }
         },
+
         methods: {
             async getPokeAPI() {
                 let req = new Request(this.currentUrl);
@@ -42,7 +47,18 @@
                     console.log(error);
                 })
             },
-            
+
+            scrollTrigger() {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if(entry.intersectionRatio > 0 && this.nextUrl){
+                            this.next();
+                        }
+                    });
+                });
+                observer.observe(this.$refs.infinitescrolltrigger);
+            },
+
             next() {
                 this.currentUrl = this.nextUrl;
                 this.getPokeAPI();
@@ -85,5 +101,15 @@
 
     h3{
         margin: 0;
+    }
+
+    #scroll-trigger{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+        font-size: 2rem;
+        color: #efefef;
     }
 </style>
