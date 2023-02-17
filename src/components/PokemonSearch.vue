@@ -44,7 +44,7 @@
         width: 100%;
         margin-bottom: 1rem;
         max-width: 510px;
-        padding: 1rem;
+        padding: 1rem 0;
     }
 
     label{
@@ -72,7 +72,7 @@
 
     i{
         position: absolute;
-        top: 50px;
+        top: 27px;
         right: 20px;
         font-size: 1.25rem;
         color: #0A2E50;
