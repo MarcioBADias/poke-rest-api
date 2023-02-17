@@ -105,7 +105,6 @@
                             return resp.json();
                     })
                     .then(data => {
-                        console.log(data);
                         this.pokemon = data;
                         this.show = true;
                     })

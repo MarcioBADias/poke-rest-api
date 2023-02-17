@@ -24,4 +24,8 @@ export default {
   padding: 0;
 }
 
+#app{
+  background: url(../public/assets/img/poke-bg.jpg) center / cover;
+}
+
 </style>
