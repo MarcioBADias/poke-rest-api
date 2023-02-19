@@ -71,8 +71,8 @@
     }
 
 
-    i{
-        color: #0A2E50;
+    .fa-search{
+        color: #efefef;
         cursor: pointer;
         font-size: 1rem;
         position: absolute;

@@ -78,6 +78,7 @@
                 Close
             </button>
         </div>
+        <i v-else class="fas fa-spinner fa-spin"></i>
     </div>
 </template>
 
@@ -244,6 +245,11 @@
         margin-bottom: 2rem;
         font-size: 1.2rem;
         cursor: pointer
+    }
+
+    .fa-spinner{
+        font-size: 2rem;
+        color: #efefef
     }
 
 </style>
