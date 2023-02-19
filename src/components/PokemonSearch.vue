@@ -74,7 +74,7 @@
     .fa-search{
         color: #efefef;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: 2rem;
         position: absolute;
         right: 20px;
         top: 27px;
