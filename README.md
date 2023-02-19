@@ -1,6 +1,6 @@
 # Poke Rest API
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8fbb2cb5-5e4c-4b1e-9b4a-99d4c5d5f5c5/deploy-status)](https://app.netlify.com/sites/poke-rest-api/deploys)
+![Descrição da imagem](https://raw.githubusercontent.com/MarcioBADias/poke-rest-api/main/public/assets/img/png_20230219_005604_0000.png)
 
 
 ## Desafio
