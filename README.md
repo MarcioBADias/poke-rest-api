@@ -5,7 +5,7 @@
 
 ## Desafio
 
-Construir uma aplicação para listagem e busca de pokemons utilizando a PokeAPI v2. A aplicação consiste em uma tela com um campo de busca centralizado que, ao ser acionado com o nome do pokémon, submete a pesquisa para a PokeAPI e retorna as informações do pokémon buscado e de suas evoluções (Evolution Chains). Para cada um dos pokémons listados, queremos ver seu nome e sua imagem.
+Construir uma aplicação para listagem e busca de pokemons utilizando a PokeAPI v2. A aplicação consiste em uma tela com um campo de busca centralizado que, ao ser acionado com o nome do pokémon, submete a pesquisa para a PokeAPI e retorna as informações do pokémon buscado. Para cada um dos pokémons listados, queremos ver seu nome e sua imagem.
 
 Ao clicarmos em um pokémon listado, queremos listar suas principais características (hp, attack, defense, special attack, special defense e speed), utilizando princípios básicos de UI/UX.
 
